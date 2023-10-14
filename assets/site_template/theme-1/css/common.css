@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/*
+  File Name   : common.css
+  Description : コンテンツエリア共通
+*/
+
+/* web font
+============================================================ */
+.com-font-Oswald {
+  font-family: "Oswald", sans-serif;
+}
+.com-font-Lato {
+  font-family: "Lato", sans-serif;
+}
+.com-font-Roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+/* section
+============================================================ */
+.com-section-inner {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* sp
+------------------------------------------------------------ */
+@media screen and (max-width: 811px) {
+  .com-section-inner {
+    width: 100%;
+  }
+}
+
+/* section KV
+============================================================ */
+.com-section-kv {
+  width: 100%;
+  height: 400px;
+  background-color: #eee;
+  position: relative;
+  margin: 0 0 30px;
+}
+.com-page-title-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.com-page-title-wrap > * {
+  color: #fff;
+  text-align: center;
+}
+.com-page-title-wrap .com-page-title-lang-jp {
+  font-size: 30px;
+  font-weight: bold;
+}
+.com-page-title-wrap .com-page-title-lang-en {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  margin: 10px 0 0;
+}
+.com-section-kv-main-img-block {
+  position: relative;
+}
+.com-section-kv-main-img {
+  height: 400px;
+  background-color: #fff;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.com-section-kv-main-img-block:after {
+  content: "";
+  width: 100%;
+  height: 400px;
+  display: block;
+  position: absolute;
+  top: 0;
+  background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.1) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#1a000000',GradientType=0 );
+}
+
+/* sp
+------------------------------------------------------------ */
+@media screen and (max-width: 811px) {
+  .com-section-kv,
+  .com-section-kv-main-img,
+  .com-section-kv-main-img-block:after {
+    height: 200px;
+  }
+  .com-page-title-wrap .com-page-title-lang-jp {
+    font-size: 20px;
+  }
+  .com-page-title-wrap .com-page-title-lang-en {
+    font-size: 12px;
+  }
+}
+
+/* paging
+============================================================ */
+.com-paging-wrap {
+  position: relative;
+  text-align: center;
+  margin: 60px auto 60px;
+}
+.com-paging-wrap .com-paging ul {
+  overflow: visible;
+}
+.com-paging-wrap .com-paging ul li {
+  margin: 0 2.5px 0;
+  /* border: solid 1px #eaeaea; */
+  position: relative;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.com-paging-wrap .com-paging ul li a,
+.com-paging-wrap .com-paging ul li span {
+  font-size: 13px;
+  color: #666;
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 42px;
+  background-color: #eee;
+}
+.com-paging-wrap .com-paging ul li span {
+  font-weight: bold;
+  color: #fff !important;
+  background-color: #888;
+}
+.com-paging-wrap .com-paging ul li.prev,
+.com-paging-wrap .com-paging ul li.next {
+  margin: 0 2.5px 0;
+  /* border: solid 1px #eaeaea; */
+  position: relative;
+}
+.com-paging-wrap .com-paging ul li:last-child {
+  margin-right: 0;
+}
+.com-paging-wrap .com-paging ul li.prev:before,
+.com-paging-wrap .com-paging ul li.next:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-top: 2px solid #666;
+  border-right: 2px solid #666;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  pointer-events: none;
+}
+.com-paging-wrap .com-paging ul li.prev:before {
+  border-bottom: 2px solid #666;
+  border-left: 2px solid #666;
+  border-top: none;
+  border-right: none;
+}
+

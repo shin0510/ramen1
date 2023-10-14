@@ -1,0 +1,360 @@
+@charset "utf-8";
+/*!
+ * This file provides to reset CSS for browsers and a lot of utility classes.
+ *
+ * @copyright (C) Fabric Arts inc.
+ * @version   1.0.0
+ */
+
+
+/* Universal reset
+----------------------------------------------------------- */
+/*** structure ***/
+html {
+  overflow-y: scroll;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+/*** text ***/
+p {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0;
+  /*font-size: 2.369em;*/
+}
+
+h2 {
+  /*font-size: 1.777em;*/
+}
+
+h3 {
+  /*font-size: 1.333em;*/
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  margin: 0;
+}
+
+small,
+.font-small {
+  font-size: .75em;
+}
+
+sub {
+  vertical-align: baseline;
+  position: relative;
+  bottom: -0.2em;
+}
+
+sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.3em;
+}
+
+iframe {
+  border: none;
+}
+
+/*** list ***/
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+}
+
+li,
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul.disc {
+  list-style-type: disc;
+  margin-left: 1.6em;
+}
+
+/*** object ***/
+embed,
+object {
+  vertical-align: bottom;
+}
+
+/*** presentation ***/
+hr {
+  display: none;
+}
+
+u {
+  text-decoration: underline;
+}
+
+/*** edit ***/
+del {
+  color: #666;
+  text-decoration: line-through;
+}
+
+ins {
+  border-bottom: 1px dotted #ccc;
+  text-decoration: none;
+}
+
+/*** forms ***/
+legend {
+  white-space: normal;
+}
+
+button,
+input,
+label,
+select,
+textarea,
+form img {
+  vertical-align: middle;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input,
+select,
+textarea {
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="email"],
+input[type="telephone"],
+input[type="url"],
+input[type="password"] {
+  max-width: 100%;
+}
+
+button,
+input[type="color"],
+input[type="file"],
+input[type="image"],
+input[type="range"] {
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+input[type="checkbox"],
+input[type="color"],
+input[type="radio"],
+input[type="range"],
+select {
+  cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="color"],
+input[type="file"],
+input[type="image"],
+input[type="radio"],
+input[type="range"] {
+  border: none;
+}
+
+input[type="password"] {
+  ime-mode: disabled;
+}
+
+input[disabled],
+input[readonly],
+select[disabled],
+select[readonly] {
+  cursor: default;
+}
+
+textarea {
+  resize: vertical;
+}
+
+label + label,
+label + input[type="checkbox"],
+label + input[type="radio"] {
+  /*margin-left: 10px;*/
+}
+
+label > input[type="checkbox"],
+label > input[type="radio"] {
+  margin-right: 5px;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  margin-left: 5px;
+}
+
+.over,
+form a img,
+input[type="button"],
+input[type="image"],
+input[type="reset"],
+input[type="submit"],
+button {
+  -webkit-transition: opacity .2s ease-in-out;
+     -moz-transition: opacity .2s ease-in-out;
+      -ms-transition: opacity .2s ease-in-out;
+       -o-transition: opacity .2s ease-in-out;
+          transition: opacity .2s ease-in-out;
+}
+
+.over:hover,
+form a:hover img,
+form a:active img,
+input[type="button"]:hover,
+input[type="button"]:active,
+input[type="image"]:hover,
+input[type="image"]:active,
+input[type="reset"]:hover,
+input[type="reset"]:active,
+input[type="submit"]:hover,
+input[type="submit"]:active,
+button:hover,
+button:active {
+  -ms-filter: "alpha(opacity=80)";
+  -moz-opacity: .8;
+       opacity: .8;
+}
+
+label.error,
+input.error {
+  background: #ffeeee;
+}
+
+/*** tables ***/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+table th,
+table td {
+  word-break: break-all;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*** image ***/
+img {
+  vertical-align: bottom;
+  -ms-interpolation-mode: bicubic;
+}
+
+/*** selection ***/
+::-moz-selection {
+  color: #fff;
+  background: #3399ff;
+  text-shadow: none;
+}
+::selection {
+  color: #fff;
+  background: #3399ff;
+  text-shadow: none;
+}
+input::selection,
+textarea::selection {
+  color: #000;
+}
+
+/*** placeholder ***/
+::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+:-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+:placeholder-shown {
+  color: #666;
+  opacity: 1;
+}
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+:focus:-moz-placeholder {
+  color: transparent;
+}
+:focus::-moz-placeholder {
+  color: transparent;
+}
+:focus:-ms-input-placeholder {
+  color: transparent;
+}
+:focus:placeholder-shown {
+  color: inherit;
+}
