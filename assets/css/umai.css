@@ -1,0 +1,386 @@
+@charset "utf-8";
+
+/*
+  File Name   : umai.css
+  Description : umaiのレイアウト
+*/
+
+
+/* umai
+============================================================ */
+
+.umai-kv {
+  background: #000 url("../img/umai/bg-kv-01.png") no-repeat center center;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+
+.umai-kv__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.umai-kv__wrap > div {
+  height: 600px;
+}
+
+.umai-kv__left {
+  color: #fff;
+  width: calc(50% - 10px);
+  position: relative;
+}
+
+.umai-kv__content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.umai-kv__content h1 {
+  margin-bottom: 40px;
+}
+
+.umai-kv__content p {
+  line-height: 2em;
+}
+
+.umai-kv__right {
+  width: calc(40% - 10px);
+  position: relative;
+}
+
+.umai-kv__right > img {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  max-width: 450px;
+}
+
+
+@media screen and (max-width: 811px) {
+
+  .umai-kv {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .umai-kv__wrap {
+    display: block;
+  }
+
+  .umai-kv__wrap > div {
+    height: auto;
+  }
+
+  .umai-kv__left {
+    width: 100%;
+  }
+
+  .umai-kv__content {
+    position: relative;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .umai-kv__content h1 {
+    margin-bottom: 20px;
+    padding: 0 40px;
+  }
+
+  .umai-kv__right {
+    width: 100%;
+    padding: 20px 40px;
+  }
+
+  .umai-kv__right > img {
+    position: relative;
+    top: auto;
+    right: auto;
+    max-width: 100%;
+  }
+
+}
+
+/* umai top
+============================================================ */
+.umai-top {
+  padding: 140px 0 0;
+}
+
+.umai-top__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.umai-top__img {
+  width: calc(35% - 40px);
+  text-align: right;
+}
+
+.umai-top__img img {
+  width: 171px;
+  height: auto;
+}
+
+.umai-top__img--en img {
+  width: 280px;
+  height: auto;
+}
+
+.umai-top__text {
+  width: calc(65% - 40px);
+}
+
+.umai-top__text p {
+  margin-bottom: 20px;
+  line-height: 2em;
+}
+
+@media screen and (max-width: 811px) {
+
+  .umai-top {
+    padding: 40px 0 0;
+  }
+
+  .umai-top__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .umai-top__img {
+    order: 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  .umai-top__text {
+    order: 1;
+    width: 100%;
+    text-align: center;
+  }
+
+  .umai-top__text p {
+    margin-bottom: 20px;
+    line-height: 2em;
+  }
+
+
+}
+
+/* umai voice
+============================================================ */
+
+.umai-voice {
+  padding: 140px 0 40px;
+}
+
+.umai-voice__item {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.umai-voice__content {
+  width: 50%;
+  position: relative;
+}
+
+.umai-voice__content:before {
+  content: '';
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background: url("../img/umai/bg-umai-01.png") no-repeat center center;
+}
+
+.umai-voice__content h2 {
+  padding: 50px 10px 50px 20px;
+  position: relative;
+}
+
+.umai-voice__content h2 p {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.24em;
+  margin-bottom: 15px;
+}
+
+.umai-voice__content h2 p span {
+  background: #000;
+  color: #fff;
+}
+
+.umai-voice__content h2 p:last-of-type {
+  margin-bottom: 0;
+}
+
+.umai-voice__content h2:before {
+  content: '';
+  border-top: 2px solid #b42a28;
+  border-left: 2px solid #b42a28;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 60px;
+}
+
+.umai-voice__content h2:after {
+  content: '';
+  border-bottom: 2px solid #b42a28;
+  border-right: 2px solid #b42a28;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 60px;
+}
+
+.umai-voice__img {
+  width: 50%;
+  height: 600px;
+  position: relative;
+}
+
+.umai-voice__img:before {
+  content: '';
+  position: absolute;
+  width: 50vw;
+  height: 100%;
+}
+
+/* umai item 順番 */
+.umai-voice__item:nth-child(odd) .umai-voice__content,
+.umai-voice__item:nth-child(even) .umai-voice__img {
+  order: 1;
+}
+
+.umai-voice__item:nth-child(even) .umai-voice__content,
+.umai-voice__item:nth-child(odd) .umai-voice__img {
+  order: 2;
+}
+
+/* h2 位置 */
+.umai-voice__item:nth-child(odd) .umai-voice__content {
+  padding-right: 60px;
+}
+.umai-voice__item:nth-child(even) .umai-voice__content {
+  padding-left: 60px;
+}
+
+/* content 背景画像位置 */
+
+.umai-voice__item:nth-child(odd) .umai-voice__content:before {
+  top: 20px;
+  left: -140px;
+}
+.umai-voice__item:nth-child(even) .umai-voice__content:before {
+  top: 20px;
+  right: -140px;
+}
+
+/* 画像部分指定 */
+.umai-voice__item:nth-child(1) .umai-voice__img:before {
+  background: url("../img/umai/img-umai-01.png") no-repeat center center;
+  background-size: cover;
+}
+.umai-voice__item:nth-child(2) .umai-voice__img:before {
+  background: url("../img/umai/img-umai-02.png") no-repeat center center;
+  right: 0;
+  background-size: cover;
+}
+.umai-voice__item:nth-child(3) .umai-voice__img:before {
+  background: url("../img/umai/img-umai-03.png") no-repeat center center;
+  background-size: cover;
+}
+.umai-voice__item:nth-child(4) .umai-voice__img:before {
+  background: url("../img/umai/img-umai-04.png") no-repeat center center;
+  right: 0;
+  background-size: cover;
+}
+.umai-voice__item:nth-child(5) .umai-voice__img:before {
+  background: url("../img/umai/img-umai-05.png") no-repeat center center;
+  background-size: cover;
+}
+
+
+@media screen and (max-width: 811px) {
+
+  .umai-voice {
+    padding: 40px 0;
+  }
+
+  .umai-voice__item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .umai-voice__content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .umai-voice__content:before {
+    width: 300px;
+    height: 300px;
+    background: url("../img/umai/bg-umai-01.png") no-repeat center center;
+    background-size: 300px 300px;
+  }
+
+  .umai-voice__content h2 {
+    padding: 20px 20px;
+  }
+
+  .umai-voice__content h2 p {
+    font-size: 18px;
+    mb10
+  }
+
+  .umai-voice__img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .umai-voice__img:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  /* umai item 順番 */
+  .umai-voice__item:nth-child(odd) .umai-voice__content,
+  .umai-voice__item:nth-child(even) .umai-voice__content {
+    order: 1;
+  }
+
+  .umai-voice__item:nth-child(odd) .umai-voice__img,
+  .umai-voice__item:nth-child(even) .umai-voice__img {
+    order: 2;
+  }
+
+  /* h2 位置 */
+  .umai-voice__item:nth-child(odd) .umai-voice__content {
+    padding-right: 0;
+  }
+  .umai-voice__item:nth-child(even) .umai-voice__content {
+    padding-left: 0;
+  }
+
+  /* content 背景画像位置 */
+
+  .umai-voice__item:nth-child(odd) .umai-voice__content:before {
+    top: 20px;
+    left: -140px;
+  }
+  .umai-voice__item:nth-child(even) .umai-voice__content:before {
+    top: 20px;
+    right: -140px;
+  }
+
+}

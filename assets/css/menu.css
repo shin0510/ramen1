@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/*
+  File Name   : menu.css
+  Description : menuのレイアウト
+*/
+
+
+/* kv
+============================================================ */
+
+.menu-kv {
+  background: url("../img/menu/kv-menu-01.png") no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 300px);
+  position: relative;
+}
+
+.menu-kv__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-kv__wrap > div {
+  width: calc(50% - 10px);
+  height: calc(100vh - 300px);
+}
+
+.menu-kv__left {
+  color: #fff;
+  position: relative;
+}
+
+.menu-kv__content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.menu-kv__content h1 {
+  font-size: 70px;
+  font-weight: 400;
+  font-family: Lato;
+  margin-bottom: 5px;
+}
+
+.menu-kv__content span {
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.menu-kv__content p {
+  line-height: 2em;
+}
+
+.menu-kv__right {
+  position: relative;
+}
+
+.menu-kv__right > img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+
+@media screen and (max-width: 811px) {
+
+  .menu-kv {
+    height: auto;
+    position: relative;
+  }
+
+  .menu-kv__wrap {
+    display: block;
+    padding: 20px 0;
+  }
+
+  .menu-kv__wrap > div {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-kv__content {
+    position: relative;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    margin-bottom: 20px;
+  }
+
+  .menu-kv__content h1 {
+    font-size: 40px;
+  }
+
+  .menu-kv__right > img {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+
+
+}
+
+
+/* menu content
+============================================================ */
+.menu-content {
+  padding: 80px 0 120px;
+}
+
+.menu-content img {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.menu-content p {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.menu-content a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 811px) {
+
+  .menu-content {
+    padding: 20px 0 60px;
+  }
+
+}

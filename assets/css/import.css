@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/*
+  File Name   : import.css
+  Description : 各CSSファイルの読み込み
+*/
+
+/* base styles
+============================================================ */
+@import url("default.css");
+@import url("module.css");
+@import url("layout.css");
+@import url("common.css");
+
+/* library styles
+============================================================ */
+@import url("../libs/colorbox/colorbox.css");
+@import url("../libs/bxslider/jquery.bxslider.css");
+@import url("../libs/slick/slick-theme.css");
+@import url("../libs/slick/slick.css");
+
+/* icon styles
+============================================================ */
+@import url("../icons/style.css");

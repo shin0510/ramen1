@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/*
+  File Name   : common.css
+  Description : コンテンツエリア共通
+*/
+
+/* section
+============================================================ */
+a{
+  pointer-events: none;
+}
+* :hover{
+  cursor: pointer;
+}
+.section-inner {
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* sp section
+------------------------------------------------------------ */
+@media screen and (max-width: 811px) {
+  .section-inner {
+    width: 100%;
+  }
+}
+
+/* bg-full
+============================================================ */
+
+.bg-full {
+  position: relative;
+}
+.bg-full:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  min-width: 960px;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+@media screen and (max-width: 811px) {
+
+  .bg-full:before {
+    min-width: 100%;
+  }
+
+}

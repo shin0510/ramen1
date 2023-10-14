@@ -1,0 +1,326 @@
+@charset "utf-8";
+
+/*
+  File Name   : point.css
+  Description : pointのレイアウト
+*/
+
+
+/* point
+============================================================ */
+
+.point-kv {
+  background: #000;
+  position: relative;
+}
+
+.point-kv__wrap {
+  position: relative;
+  height: 900px;
+}
+
+.point-kv__wrap > img {
+  width: 549px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  bottom: -100px;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.point-kv__text {
+  padding: 100px 0 0;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  height: 500px;
+  font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN";
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+.point-kv__text--en {
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: tb-rl;
+          writing-mode: horizontal-tb;
+}
+
+.point-kv__text h1 {
+  font-size: 60px;
+  font-weight: normal;
+  margin: -25px 50px 0 60px;
+}
+
+.point-kv__text p {
+  margin-left: 40px;
+  line-height: 2.5em;
+  font-size: 17px;
+  z-index: 10;
+  position: relative;
+}
+
+.point-kv__text img {
+  position: absolute;
+  left: 0;
+  top: 280px;
+}
+
+
+@media screen and (max-width: 811px) {
+
+  .point-kv {
+    margin-bottom: 150px;
+  }
+
+  .point-kv__wrap {
+    position: relative;
+    height: auto;
+    padding-bottom: 160px;
+  }
+
+  .point-kv__wrap > img {
+    max-width: 300px;
+    bottom: -140px;
+  }
+
+  .point-kv__text {
+    padding: 40px 0 0;
+    position: relative;
+    right: auto;
+    height: auto;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+  }
+
+  .point-kv__text h1 {
+    font-size: 36px;
+    margin: 0 0 20px 0;
+  }
+
+  .point-kv__text p {
+    margin-left: 0;
+    font-size: 15px;
+    line-height: 2em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .point-kv__text img {
+    display: none;
+  }
+
+
+}
+
+
+/* point voice
+============================================================ */
+
+.point {
+  padding: 140px 0 40px;
+}
+
+.point__item {
+  margin-bottom: 100px;
+}
+
+.point__item > p {
+  line-height: 2em;
+}
+
+.point__item__wrap {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.point__item__wrap:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  width: 550px;
+  height: 550px;
+  background: url("../img/point/bg-point-01.png") no-repeat center center;
+  z-index: -1;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.point__content {
+  width: 50%;
+  position: relative;
+}
+
+.point__content > img {
+  margin-bottom: 60px;
+}
+
+.point__content > p {
+  margin-top: 40px;
+  line-height: 2em;
+}
+
+.point__content h2 {
+  padding: 50px 0px 50px 30px;
+  position: relative;
+  font-size: 32px;
+}
+
+.point__content h2 p {
+  line-height: 1.5em;
+  font-weight: bold;
+}
+
+.point__content h2 p span {
+  background: #000;
+  line-height: 1em;
+  color: #fff;
+  font-weight: bold;
+}
+
+.point__content h2:before {
+  content: '';
+  border-top: 2px solid #b42a28;
+  border-left: 2px solid #b42a28;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 60px;
+}
+
+.point__content h2:after {
+  content: '';
+  border-bottom: 2px solid #b42a28;
+  border-right: 2px solid #b42a28;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 60px;
+}
+
+
+.point__img {
+  width: 50%;
+  height: 600px;
+  position: relative;
+}
+
+.point__img:before {
+  content: '';
+  position: absolute;
+  width: 50vw;
+  height: 100%;
+}
+
+/* point item 順番 */
+.point__item:nth-child(odd) .point__content,
+.point__item:nth-child(even) .point__img {
+  order: 1;
+}
+
+.point__item:nth-child(even) .point__content,
+.point__item:nth-child(odd) .point__img {
+  order: 2;
+}
+
+/* content 位置 */
+.point__item:nth-child(odd) .point__content {
+  padding-right: 60px;
+}
+.point__item:nth-child(even) .point__content {
+  padding-left: 60px;
+}
+
+
+/* 画像部分指定 */
+.point__item:nth-child(1) .point__img:before {
+  background: url("../img/point/img-point-01.png") no-repeat center center;
+  background-size: cover;
+}
+.point__item:nth-child(2) .point__img:before {
+  background: url("../img/point/img-point-03.png") no-repeat center center;
+  right: 0;
+  background-size: cover;
+}
+.point__item:nth-child(3) .point__img:before {
+  background: url("../img/point/img-point-04.png") no-repeat center center;
+  background-size: cover;
+}
+
+
+@media screen and (max-width: 811px) {
+
+  .point {
+    padding: 40px 0;
+  }
+
+  .point__item {
+    margin-bottom: 60px;
+  }
+
+  .point__item__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .point__item__wrap:before {
+    width: 300px;
+    height: 300px;
+    background: url("../img/point/bg-point-01.png") no-repeat center center;
+    background-size: 300px 300px;
+  }
+
+  .point__content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .point__content > img {
+    display: none;
+  }
+
+  .point__content h2 {
+    padding: 20px 20px;
+    font-size: 18px;
+  }
+
+  .point__img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .point__img:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  /* point item 順番 */
+  .point__item:nth-child(odd) .point__content,
+  .point__item:nth-child(even) .point__content {
+    order: 1;
+  }
+
+  .point__item:nth-child(odd) .point__img,
+  .point__item:nth-child(even) .point__img {
+    order: 2;
+  }
+
+  /* h2 位置 */
+  .point__item:nth-child(odd) .point__content {
+    padding-right: 0;
+  }
+  .point__item:nth-child(even) .point__content {
+    padding-left: 0;
+  }
+
+}

@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/*
+  File Name   : privacy.css
+  Description : privacyのレイアウト
+*/
+
+
+/* kv
+============================================================ */
+
+.pp-kv {
+  position: relative;
+  background: #fff;
+  padding: 60px 0 40px;
+}
+
+.pp-kv__wrap {
+  color: #000;
+  position: relative;
+}
+
+.pp-kv__wrap h1 {
+  font-size: 70px;
+  font-weight: 400;
+  font-family: Lato;
+  margin-bottom: 5px;
+}
+
+.pp-kv__wrap span {
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 811px) {
+
+  .pp-kv {
+    padding: 20px 0;
+  }
+
+  .pp-kv__wrap h1 {
+    font-size: 36px;
+  }
+
+}
+
+
+/* pp content
+============================================================ */
+.pp-content {
+  padding: 40px 0 100px;
+}
+
+.pp-content__wrap {
+  margin-bottom: 40px;
+}
+
+.pp-content__wrap h2 {
+  margin-bottom: 20px;
+}
+
+.pp-content p {
+  line-height: 2em;
+}
+
+.pp-content a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 811px) {
+
+  .pp-content {
+    padding: 20px 0 60px;
+  }
+
+}

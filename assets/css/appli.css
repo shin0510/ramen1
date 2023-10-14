@@ -1,0 +1,437 @@
+@charset "utf-8";
+
+/*
+  File Name   : appli.css
+  Description : appliのレイアウト
+*/
+
+
+/* kv
+============================================================ */
+
+.appli-kv {
+  background: url("../img/appli/kv-appli-01.png") no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 200px);
+  position: relative;
+}
+
+.appli-kv__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.appli-kv__wrap > div {
+  height: calc(100vh - 200px);
+}
+
+.appli-kv__left {
+  color: #fff;
+  width: calc(60% - 10px);
+  position: relative;
+}
+
+.appli-kv__content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.appli-kv__content h1 {
+  font-size: 70px;
+  font-weight: 400;
+  font-family: Lato;
+  margin-bottom: 5px;
+}
+
+.appli-kv__content span {
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.appli-kv__content p {
+  line-height: 2em;
+}
+
+.appli-kv__right {
+  width: calc(40% - 10px);
+  position: relative;
+}
+
+.appli-kv__right > img {
+  width: 245px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 811px) {
+
+  .appli-kv {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .appli-kv__wrap {
+    display: block;
+  }
+
+  .appli-kv__wrap > div {
+    width: 100%;
+    height: auto;
+  }
+
+  .appli-kv__content {
+    position: relative;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    margin-bottom: 20px;
+  }
+
+  .appli-kv__content h1 {
+    font-size: 40px;
+  }
+
+  .appli-kv__right {
+    position: relative;
+    text-align: center;
+  }
+
+  .appli-kv__right > img {
+    max-width: 200px;
+    position: relative;
+    top: auto;
+    left: auto;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+}
+
+
+/* appli content
+============================================================ */
+
+.appli-content {
+  padding: 80px 0;
+}
+
+.appli-content h2 {
+  font-size: 24px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cf0d0d;
+  margin-bottom: 30px;
+}
+
+.appli-content__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.appli-content__list li {
+  width: calc(50% - 20px);
+}
+
+.appli-content__list li:first-child,
+.appli-content__list li:nth-child(2) {
+  margin-bottom: 40px;
+}
+
+.appli-content__list li h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.appli-content__list li div {
+  height: 340px;
+  text-align: center;
+  margin-top: 15px;
+  border: 1px solid #eee;
+  padding: 25px;
+}
+
+.appli-content__list li div img {
+  max-height: 100%;
+}
+
+.appli-content__list + p {
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 811px) {
+
+  .appli-content {
+    padding: 40px 0;
+  }
+
+  .appli-content h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .appli-content__list {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .appli-content__list li {
+    width: 100%;
+  }
+
+  .appli-content__list li:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .appli-content__list li h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .appli-content__list li div {
+    height: auto;
+    padding: 20px;
+  }
+
+  .appli-content__list + p {
+    margin-bottom: 40px;
+  }
+
+}
+
+
+/* install */
+
+.appli__install {
+  background: #cf0d0d;
+  padding: 30px 100px;
+  position: relative;
+}
+
+.appli__install:before {
+  content: '';
+  background: url("../img/appli/img-install-circle.png") no-repeat center center;
+  width: 335px;
+  height: 290px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.appli__install h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN";
+  margin-bottom: 30px;
+}
+
+.appli__install__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.appli__install__action {
+  width: calc(50% + 40px);
+}
+
+.appli__install__app {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.appli__install__app > * {
+  width: calc(50% - 5px);
+}
+
+.appli__install__app li:first-child {
+  margin-bottom: 20px;
+}
+
+.appli__install__qr {
+  background: #a60a0a;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.appli__install__qr p {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.appli__install__search {
+  color: #fff;
+}
+
+.appli__install__search p {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 5px;
+  letter-spacing: -0.04em;
+}
+
+.appli__install__search p span {
+  font-size: 26px;
+  margin: 0 -10px 0 -20px;
+}
+
+.appli__install__search--cntw p span {
+  margin: 0 -10px 0 -10px;
+}
+
+.appli__install__search--en p span {
+  margin: 0;
+}
+
+.appli__install__search img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.appli__install__search > span {
+  font-size: 12px;
+}
+
+
+.appli__install__benefit {
+  width: calc(50% - 70px);
+  text-align: center;
+  position: relative;
+}
+
+.appli__install__benefit__box {
+  border: 3px solid #fff;
+  padding: 20px 8px;
+  background: rgba(166,10,10,.7);
+  color: #fff;
+  position: relative;
+}
+
+.appli__install__benefit__box:before {
+  content: '';
+  position: absolute;
+  top: calc(100% + 1px);
+  right: 60px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top: 16px solid #fff;
+  transform: rotate(14deg);
+}
+
+.appli__install__benefit__box span {
+  font-size: 13px;
+}
+
+.appli__install__benefit__box p {
+  color: #fff331;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.appli__install__benefit__egg {
+  position: absolute;
+  bottom: -20px;
+  left: 55%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.appli__install__benefit__egg--en {
+  bottom: -55px;
+}
+
+
+@media screen and (max-width: 811px) {
+
+  .appli__install {
+    padding: 20px;
+  }
+
+  .appli__install:before {
+    content: '';
+    background: url("../img/appli/img-install-circle.png") no-repeat center center;
+    background-size: 200px auto;
+    width: 200px;
+    height: 173px;
+  }
+
+  .appli__install h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .appli__install__wrap {
+    display: block;
+  }
+
+  .appli__install__action {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .appli__install__app {
+    margin-bottom: 10px;
+  }
+
+  .appli__install__app li:first-child {
+    margin-bottom: 20px;
+  }
+
+  .appli__install__qr {
+    padding: 10px;
+  }
+
+  .appli__install__qr p {
+    font-size: 12px;
+  }
+
+  .appli__install__search p {
+    font-size: 16px;
+  }
+
+  .appli__install__search p span {
+    font-size: 18px;
+    margin: 0 -10px 0 -15px;
+  }
+
+  .appli__install__search--cntw p span {
+    margin: 0;
+  }
+
+  .appli__install__search--en p span {
+    margin: 0;
+  }
+
+  .appli__install__benefit {
+    width: 100%;
+    padding-bottom: 160px;
+  }
+
+  .appli__install__benefit__box {
+    padding: 10px 8px;
+  }
+
+  .appli__install__benefit__box p {
+    font-size: 16px;
+  }
+
+  .appli__install__benefit__egg {
+    position: absolute;
+    top: 80px;
+    bottom: auto;
+  }
+
+}
